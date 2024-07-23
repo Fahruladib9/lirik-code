@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Hogback";
+  src: url("../fonts/Murasamu Free Trial.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Hogback", "Noto Sans JP", sans-serif;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("../img/bg.gif");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+#lyrics {
+  font-size: 4vw;
+  text-align: center;
+  white-space: pre-wrap;
+  margin: 20px 0;
+  color: #f0f0f0;
+}
+
+.line {
+  opacity: 0;
+  transition: opacity 1s;
+  text-shadow: 2px 2px 4px #000000, 0 0 10px #000000;
+}
+
+.line.active {
+  opacity: 1;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 2vw;
+  cursor: pointer;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, opacity 0.5s;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media (max-width: 768px) {
+  #lyrics {
+    font-size: 6vw;
+  }
+
+  button {
+    font-size: 6vw;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #lyrics {
+    font-size: 8vw;
+  }
+
+  button {
+    font-size: 8vw;
+    padding: 8px 16px;
+  }
+}
+
+.credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 15px;
+  color: #f0f0f0;
+  font-family: sans-serif;
+}
